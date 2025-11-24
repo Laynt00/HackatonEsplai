@@ -1,6 +1,6 @@
 package com.nexe.backend.repository;
 
-import com.nexe.backend.Model.Schedule;
+import com.nexe.backend.model.Schedule;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Date;

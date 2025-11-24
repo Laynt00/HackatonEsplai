@@ -1,6 +1,6 @@
 package com.nexe.backend.controller;
 
-import com.nexe.backend.Model.Activity;
+import com.nexe.backend.model.Activity;
 import com.nexe.backend.service.ActivityService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;

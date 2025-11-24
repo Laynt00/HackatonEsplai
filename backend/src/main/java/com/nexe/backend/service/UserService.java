@@ -1,6 +1,6 @@
 package com.nexe.backend.service;
 
-import com.nexe.backend.Model.User;
+import com.nexe.backend.model.User;
 import com.nexe.backend.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

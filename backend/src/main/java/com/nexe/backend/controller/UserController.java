@@ -1,6 +1,6 @@
 package com.nexe.backend.controller;
 
-import com.nexe.backend.Model.User;
+import com.nexe.backend.model.User;
 import com.nexe.backend.service.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;

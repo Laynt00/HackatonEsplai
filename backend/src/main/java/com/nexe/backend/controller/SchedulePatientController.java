@@ -1,7 +1,7 @@
 package com.nexe.backend.controller;
 
-import com.nexe.backend.Model.Patient;
-import com.nexe.backend.Model.SchedulePatient;
+import com.nexe.backend.model.Patient;
+import com.nexe.backend.model.SchedulePatient;
 import com.nexe.backend.service.SchedulePatientService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;

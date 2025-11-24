@@ -1,5 +1,4 @@
-package com.nexe.backend.Model;
-import com.nexe.backend.model.Employee;
+package com.nexe.backend.model;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

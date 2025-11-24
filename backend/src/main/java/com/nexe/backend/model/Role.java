@@ -1,4 +1,4 @@
-package com.nexe.backend.Model;
+package com.nexe.backend.model;
 
 public enum Role {
     ADMIN,

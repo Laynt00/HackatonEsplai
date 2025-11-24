@@ -1,7 +1,6 @@
 package com.nexe.backend.service;
 
-import com.nexe.backend.Model.Schedule;
-import com.nexe.backend.Model.User;
+import com.nexe.backend.model.Schedule;
 import com.nexe.backend.repository.ScheduleRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;

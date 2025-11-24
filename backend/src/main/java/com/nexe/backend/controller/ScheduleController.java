@@ -1,6 +1,6 @@
 package com.nexe.backend.controller;
 
-import com.nexe.backend.Model.Schedule;
+import com.nexe.backend.model.Schedule;
 import com.nexe.backend.service.ScheduleService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
