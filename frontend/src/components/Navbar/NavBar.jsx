@@ -6,15 +6,7 @@ import { UserContext } from "../../context/UserProvider";
 
 export default function Navbar() {
 
-	//const {user} = useContext(UserContext)
-	const [user, setUser] = useState({
-        id: "",
-        dni: "",
-        name: "",
-        surname: "",
-        role: "family",
-    })
-
+	const {user} = useContext(UserContext)
 	console.log(user);
 	
 

@@ -1,9 +1,12 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import "./Login.css"
 import { useNavigate } from "react-router-dom"
 import { ButtonComponent } from "../ButtonComponent/ButtonComponent";
+import { UserContext } from "../../context/UserProvider";
 
 export default function Login() {
+
+  const {userLogin} = useContext(UserContext)
 
   const [formData, setFormData] = useState({
       dni: "",
@@ -16,7 +19,11 @@ export default function Login() {
   }
 
   const handleSubmit =()=>{
-    navigate("/dashboard")
+
+    const obtenerUsuario =()=>{
+
+    }
+    obtenerUsuario();
   }
 
   return (
