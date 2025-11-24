@@ -1,9 +1,6 @@
 package com.nexe.backend.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -16,6 +13,8 @@ import lombok.NoArgsConstructor;
 @Table(name = "schedule_patient")
 @Builder
 public class SchedulePatient {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idSchedulePatient;
 
     @ManyToOne

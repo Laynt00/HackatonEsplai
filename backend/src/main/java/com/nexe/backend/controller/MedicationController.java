@@ -20,7 +20,7 @@ public class MedicationController {
         return medicationService.createMedication(medication);
         
     }
-    @GetMapping
+    @GetMapping("/{id}")
     public Optional<Medication> getMedicationById(@PathVariable Integer id) {
         return medicationService.getMedicationById(id);
     }

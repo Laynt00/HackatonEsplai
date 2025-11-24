@@ -20,7 +20,7 @@ public class PatientMedicationController {
         return patientMedicationService.createPatientMedication(patientMedication);
     }
 
-    @GetMapping
+    @GetMapping("/{id}")
     public Optional<PatientMedication> getPatientMedicationById(@PathVariable Integer id) {
         return patientMedicationService.getPatientMedicationById(id);
     }
@@ -30,7 +30,7 @@ public class PatientMedicationController {
         return patientMedicationService.getAllPatientMedications();
     }
 
-    @PutMapping
+    @PutMapping("/{id}")
     public PatientMedication updatePatientMedication(@PathVariable Integer id, @RequestBody PatientMedication patientMedicationDetails) {
         return patientMedicationService.updatePatientMedication(id, patientMedicationDetails);
     }

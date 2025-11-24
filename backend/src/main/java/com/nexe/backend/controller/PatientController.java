@@ -20,7 +20,7 @@ public class PatientController {
         return patientService.createPatient(patient);
     }
 
-    @GetMapping
+    @GetMapping("/{id}")
     public Optional<Patient> getPatientById(@PathVariable Integer id) {
         return patientService.getPatientById(id);
     }
