@@ -1,0 +1,25 @@
+.peques-wrapper {
+  height: calc(100vh - 150px); /* Ajusta según altura Navbar + SearchBar */
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.peques-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Barra de scroll más bonita */
+.peques-wrapper::-webkit-scrollbar {
+  width: 8px;
+}
+
+.peques-wrapper::-webkit-scrollbar-thumb {
+  background: #bfbfbf;
+  border-radius: 4px;
+}
+
+.peques-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
