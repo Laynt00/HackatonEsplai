@@ -34,6 +34,11 @@ public class ScheduleController {
         return scheduleService.getSchedulesByDate(date);
     }
 
+    @GetMapping("/date/{date}/patients")
+    public List<Schedule> getSchedulesWithPatientsByDate(@PathVariable Date date) {
+        return scheduleService.getSchedulesByDate(date);
+    }
+    
     @PutMapping("/{id}")
     public Schedule updateSchedule(@PathVariable Integer id, @RequestBody Schedule updatedSchedule) {
         return scheduleService.updateSchedule(id, updatedSchedule);

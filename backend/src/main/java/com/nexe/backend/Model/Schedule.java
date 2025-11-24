@@ -12,7 +12,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Table(name = "users")
+@Table(name = "schedules")
 @Builder
 public class Schedule {
     @Id
