@@ -46,10 +46,7 @@ export default function Navbar() {
 					>
 						Comunicación
 					</NavLink>
-				
-				<div className="language-icon">
-					<p>🌐</p>
-				</div>
+			
 			</div>
 		</nav>
 	);
