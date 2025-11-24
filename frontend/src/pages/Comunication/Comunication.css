@@ -203,7 +203,7 @@
 
 .send-btn {
     padding: 12px 30px;
-    background-color: #1a8fb8;
+    background-color: var(--color-accent);
     color: white;
     border: none;
     border-radius: 20px;
