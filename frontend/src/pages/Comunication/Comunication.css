@@ -82,7 +82,7 @@
 }
 
 .tab-btn.active {
-    background-color: #1a8fb8;
+    background-color: var(--color-accent);
     color: #fff;
 }
 
