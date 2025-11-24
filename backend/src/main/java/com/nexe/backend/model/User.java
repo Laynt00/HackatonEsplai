@@ -1,33 +1,41 @@
 package com.nexe.backend.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Entity
+
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
-@Table(name = "users")
 @Builder
+@Entity
+@Table(name = "users")
 public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idUser;
 
+
+    @Column(nullable = false, unique = true, length = 15)
     private String dni;
 
+
+    @Column(nullable = false)
     private String password;
 
-    private Role role;
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private Role rol;
+
 
     private String name;
 
+
     private String surname;
 
-    private String contactPhone;
+    private String phone;
 
+    @Column(unique = true)
     private String email;
 }

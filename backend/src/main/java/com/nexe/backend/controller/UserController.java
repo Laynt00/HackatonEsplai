@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/users")
@@ -14,7 +15,7 @@ public class UserController {
     private final UserService userService;
 
     @PostMapping
-    public User createUser(User user) {
+    public User createUser(@RequestBody User user) {
         return userService.createUser(user);
     }
 
@@ -24,12 +25,12 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public User getUserById(@PathVariable Integer id) {
+    public Optional<User> getUserById(@PathVariable Integer id) {
         return userService.getUserById(id);
     }
 
     @GetMapping("/dni/{dni}")
-    public User getUserByDni(@PathVariable String dni) {
+    public Optional<User> getUserByDni(@PathVariable String dni) {
         return userService.getUserByDni(dni);
     }
 
@@ -37,7 +38,7 @@ public class UserController {
     public User updateUser(@PathVariable Integer id, @RequestBody User updatedUser) {
         return userService.updateUser(id, updatedUser);
     }
-    
+
     @DeleteMapping("/{id}")
     public void deleteUser(@PathVariable Integer id) {
         userService.deleteUser(id);
