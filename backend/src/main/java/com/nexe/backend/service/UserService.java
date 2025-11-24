@@ -42,7 +42,7 @@ public class UserService {
             user.setDni(userDetails.getDni());
             user.setEmail(userDetails.getEmail());
             user.setPhone(userDetails.getPhone());
-            user.setRol(userDetails.getRol());
+            user.setRole(userDetails.getRole());
 
             // codifica la contraseña si se proporciona una nueva
             if(userDetails.getPassword() != null && !userDetails.getPassword().isEmpty()){
