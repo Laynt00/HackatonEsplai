@@ -1,8 +1,23 @@
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../../public/img/nexe_blue.svg";
+import { useContext, useState } from "react";
+import { UserContext } from "../../context/UserProvider";
 
 export default function Navbar() {
+
+	//const {user} = useContext(UserContext)
+	const [user, setUser] = useState({
+        id: "",
+        dni: "",
+        name: "",
+        surname: "",
+        role: "family",
+    })
+
+	console.log(user);
+	
+
 	return (
 		<nav className="navbar">
 			<div className="navbar_logo">
@@ -10,30 +25,40 @@ export default function Navbar() {
 				<p className="navbar-title">Fundació <span>Nexe</span></p>
 			</div>
 			<div className="navbar-links">
-				<NavLink to="/dashboard" className={({ isActive }) =>
-					isActive ? "navlink active" : "navlink"}
-				>
-					Dashboard
-				</NavLink>
-
-				<NavLink to="/peques" className={({ isActive }) =>
+				{user?.role === "employee" && 
+					<NavLink to="/dashboard" className={({ isActive }) =>
 						isActive ? "navlink active" : "navlink"}
-				>
-					Peques
-				</NavLink>
+					>
+						Dashboard
+					</NavLink>
+				}
 
-				<NavLink to="/comunication" className={({ isActive }) =>
-						isActive ? "navlink active" : "navlink"}
-				>
-					Comunicación
-				</NavLink>
+				{user?.role === "employee" && 
+					<NavLink to="/peques" className={({ isActive }) =>
+							isActive ? "navlink active" : "navlink"}
+					>
+						Peques
+					</NavLink>
+				}
+				{user?.role === "family" && 
+					<NavLink to="/peques" className={({ isActive }) =>
+							isActive ? "navlink active" : "navlink"}
+					>
+						Mis Peques
+					</NavLink>
+				}
+
+				{(user?.role === "family" || user?.role === "employee") && 
+					<NavLink to="/comunication" className={({ isActive }) =>
+							isActive ? "navlink active" : "navlink"}
+					>
+						Comunicación
+					</NavLink>
+				}
+				<div className="language-icon">
+					<p>🌐</p>
+				</div>
 			</div>
-			{/* <div className="language-icon">
-				<img src={languageIcon}
-					alt="language-icon"
-					className="language-icon"
-				/>
-			</div> */}
 		</nav>
 	);
 }

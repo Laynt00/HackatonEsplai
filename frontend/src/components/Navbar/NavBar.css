@@ -97,3 +97,7 @@
     font-size: 1.1rem;
   }
 }
+
+.language-icon{
+  cursor: pointer;
+}
