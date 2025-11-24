@@ -8,6 +8,22 @@
 
     width: 100dvw;
     height: 100dvh;
+
+        background-image: url('/img/backgroud.png');
+            background-size: cover;
+            background-position: center;
+}
+
+.block{
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    background-color: white;
+        padding: 2em;
+        border-radius: 16px;
+    
+        border: 1px solid var(--color-border);
 }
 
 .HomePage__FundacioNexe {

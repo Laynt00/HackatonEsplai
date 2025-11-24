@@ -1,6 +1,5 @@
 * {
     padding: 0;
-    margin: 0;
     box-sizing: border-box;
     font-family: var(--font-base);
 }
@@ -10,9 +9,15 @@
 
     --font-family: "LaQueSea";
     --color-primary: #1a4e7a;
-    --color-secondary: #457bbd;
+    --color-secondary: #457bbd85;
     --color-accent: #d97b2e;
 
-    --font-base: "Google Sans", Arial, sans-serif;
-    --font-logo: "Architects Daughter", cursive;
+        --color-bg: #f5f7fa;
+        --color-surface: #ffffff;
+        --color-border: #ced5de;
+        --color-text: #333b4a;
+        --color-subtext: #69707d;
+
+        --font-base: "Google Sans Flex", Arial, sans-serif;
+        --font-logo: "Architects Daughter", cursive;
 }

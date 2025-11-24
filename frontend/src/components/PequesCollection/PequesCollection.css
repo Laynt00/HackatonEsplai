@@ -8,6 +8,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columnas fijas */
   gap: 20px;
+  padding: 10px;
 }
 
 /* Responsive para tablets */
