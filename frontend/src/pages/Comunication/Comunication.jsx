@@ -1,8 +1,11 @@
-import React from 'react'
-import Navbar from '../../components/Navbar/NavBar'
+import React from "react";
+import Navbar from "../../components/Navbar/NavBar";
 
 export default function Comunication() {
   return (
-    <Navbar />
-  )
+    <>
+      <Navbar />
+      <div>Comunication Page</div>
+    </>
+  );
 }
