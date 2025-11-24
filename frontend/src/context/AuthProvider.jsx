@@ -7,8 +7,7 @@ export const AuthProvider = ({children}) => {
     const [token, setToken] = useState("sdfdghjlkhgfdsafj")
 
 	useEffect(() => {
-		//const storedToken = localStorage.getItem("token");
-		const storedToken = "sadfghjkhgfdsadfghj"
+		const storedToken = localStorage.getItem("token");
 		if (storedToken) setToken(storedToken);
 	}, []);
 
