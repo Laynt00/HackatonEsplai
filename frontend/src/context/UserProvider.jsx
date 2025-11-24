@@ -1,8 +1,10 @@
+import { jwtDecode } from "jwt-decode";
+import { useEffect } from "react";
 import { createContext, useState } from "react"
 
 export const UserContext = createContext();
 
-export const UserProvider = ({children}) => {
+export const UserProvider = ({ children }) => {
 
     const [user, setUser] = useState({
         id: "",
@@ -11,8 +13,14 @@ export const UserProvider = ({children}) => {
         surname: "",
         role: "",
     })
-
-    const userLogout =()=>{
+    useEffect(() => {
+        const token = localStorage.getItem("token")
+        if (token) {
+            const decoded = jwtDecode(token);
+            console.log(decoded)
+        }
+    })
+    const userLogout = () => {
         setUser({
             id: "",
             dni: "",
@@ -22,7 +30,7 @@ export const UserProvider = ({children}) => {
         })
     }
 
-    const userLogin =(data)=>{
+    const userLogin = (data) => {
         setUser({
             id: data.id,
             dni: data.dni,
@@ -32,13 +40,13 @@ export const UserProvider = ({children}) => {
         })
     }
 
-  return (
-    <UserContext.Provider value={{
-        user,
-        userLogout,
-        userLogin
-    }}>
-        {children}
-    </UserContext.Provider>
-  )
+    return (
+        <UserContext.Provider value={{
+            user,
+            userLogout,
+            userLogin
+        }}>
+            {children}
+        </UserContext.Provider>
+    )
 }
