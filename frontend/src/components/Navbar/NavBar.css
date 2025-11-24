@@ -21,14 +21,17 @@
 
 .navbar-logo-img {
   width: 100px;
-  object-fit: contain; /* Para que la imagen no se deforme */
+  object-fit: contain;
+  /* Para que la imagen no se deforme */
 }
 
 .navbar-title {
   font-family: var(--font-logo);
   font-size: 1.4rem;
   font-weight: 600;
-  white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  white-space: nowrap;
+
+  /* Evita que el texto se divida en varias líneas */
   span {
     font-family: var(--font-logo);
     color: var(--color-accent);
@@ -89,7 +92,8 @@
 
   .navbar-links {
     gap: 16px;
-    flex-wrap: wrap; /* Permite que los links se envuelvan si es necesario */
+    flex-wrap: wrap;
+    /* Permite que los links se envuelvan si es necesario */
     justify-content: center;
   }
 
@@ -98,6 +102,10 @@
   }
 }
 
-.language-icon{
+.language-icon {
+  cursor: pointer;
+}
+
+.logoutButton {
   cursor: pointer;
 }

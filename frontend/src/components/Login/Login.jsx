@@ -25,6 +25,9 @@ export default function Login() {
     console.log(tokenProvisional);
     const decoded = jwtDecode(tokenProvisional.token);
     console.log("decoded", decoded);
+
+    navigate("/dashboard")
+
     if (tokenProvisional.role === 1) {
       navigate("/dashboard")
     }

@@ -6,10 +6,10 @@ import { UserContext } from "../../context/UserProvider";
 
 export default function Navbar() {
 
-	const {user, userLogout} = useContext(UserContext)
+	const { user, userLogout } = useContext(UserContext)
 	const navigate = useNavigate()
 
-	const logout =()=>{
+	const logout = () => {
 		userLogout()
 		navigate("/")
 	}
@@ -21,7 +21,7 @@ export default function Navbar() {
 				<p className="navbar-title">Fundació <span>Nexe</span></p>
 			</div>
 			<div className="navbar-links">
-				{user?.role === "employee" && 
+				{user?.role === "employee" &&
 					<NavLink to="/dashboard" className={({ isActive }) =>
 						isActive ? "navlink active" : "navlink"}
 					>
@@ -29,29 +29,29 @@ export default function Navbar() {
 					</NavLink>
 				}
 
-				{user?.role === "employee" && 
+				{user?.role === "employee" &&
 					<NavLink to="/peques" className={({ isActive }) =>
-							isActive ? "navlink active" : "navlink"}
+						isActive ? "navlink active" : "navlink"}
 					>
 						Peques
 					</NavLink>
 				}
-				{user?.role === "family" && 
+				{user?.role === "family" &&
 					<NavLink to="/peques" className={({ isActive }) =>
-							isActive ? "navlink active" : "navlink"}
+						isActive ? "navlink active" : "navlink"}
 					>
 						Mis Peques
 					</NavLink>
 				}
 
-				{(user?.role === "family" || user?.role === "employee") && 
+				{(user?.role === "family" || user?.role === "employee") &&
 					<NavLink to="/comunication" className={({ isActive }) =>
-							isActive ? "navlink active" : "navlink"}
+						isActive ? "navlink active" : "navlink"}
 					>
 						Comunicación
 					</NavLink>
 				}
-				<div className="navlink" onClick={logout}>
+				<div className="navlink logoutButton" onClick={logout}>
 					Logout
 				</div>
 				<div className="language-icon">
