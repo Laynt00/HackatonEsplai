@@ -1,14 +1,22 @@
-import React from "react";
+import React, { useState, useMemo } from "react";
 import PequeCard from "../PequeCard/PequeCard";
 import "./PequesCollection.css";
 import SearchBar from "../SearchBar/SearchBar";
 
 export default function PequesCollection({ peques = [], onSelectPeque }) {
+  const [query, setQuery] = useState("");
+
+  const filteredPeques = useMemo(() => {
+    const q = (query || "").trim().toLowerCase();
+    if (!q) return peques;
+    return peques.filter((p) => p.name && p.name.toLowerCase().includes(q));
+  }, [peques, query]);
+
   return (
     <>
-      <SearchBar />
+      <SearchBar onSearch={setQuery} />
       <div className="peque-grid">
-        {peques.map((p) => (
+        {filteredPeques.map((p) => (
           <PequeCard
             key={p.id}
             peque={p}
