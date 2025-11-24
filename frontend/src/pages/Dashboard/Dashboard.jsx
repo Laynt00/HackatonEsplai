@@ -5,6 +5,7 @@ import { useState, useEffect, useContext } from "react";
 import { ListaPacientesDashboard } from "../../components/ListaPacientesDashboard/ListaPacientesDashboard";
 import Navbar from "../../components/Navbar/NavBar";
 import { AuthContext } from "../../context/AuthProvider";
+import PageTransition from "../../components/PageTransitions/PageTransitions";
 
 export default function Dashboard() {
   const [selectedDay, setSelectedDay] = useState(new Date());
@@ -36,7 +37,7 @@ export default function Dashboard() {
   return (
     <div className="DashboardPage">
       <Navbar />
-      
+      <PageTransition>
       <div className="DashboardPage__content">
         <Calendar
           selectedDay={selectedDay}
@@ -47,6 +48,7 @@ export default function Dashboard() {
           appointments={appointments} 
         />
       </div>
-    </div>
+    </PageTransition>
+    </div>  
   );
 };

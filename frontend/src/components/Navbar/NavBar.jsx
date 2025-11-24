@@ -17,21 +17,21 @@ export default function Navbar() {
 				<p className="navbar-title">Fundació <span>Nexe</span></p>
 			</div>
 			<div className="navbar-links">
-				{user?.role === "employee" && 
+				
 					<NavLink to="/dashboard" className={({ isActive }) =>
 						isActive ? "navlink active" : "navlink"}
 					>
 						Dashboard
 					</NavLink>
-				}
+				
 
-				{user?.role === "employee" && 
+				
 					<NavLink to="/peques" className={({ isActive }) =>
 							isActive ? "navlink active" : "navlink"}
 					>
 						Peques
 					</NavLink>
-				}
+				
 				{user?.role === "family" && 
 					<NavLink to="/peques" className={({ isActive }) =>
 							isActive ? "navlink active" : "navlink"}
@@ -40,13 +40,13 @@ export default function Navbar() {
 					</NavLink>
 				}
 
-				{(user?.role === "family" || user?.role === "employee") && 
+				
 					<NavLink to="/comunication" className={({ isActive }) =>
 							isActive ? "navlink active" : "navlink"}
 					>
 						Comunicación
 					</NavLink>
-				}
+				
 				<div className="language-icon">
 					<p>🌐</p>
 				</div>
