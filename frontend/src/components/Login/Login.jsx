@@ -6,7 +6,7 @@ import { UserContext } from "../../context/UserProvider";
 
 export default function Login() {
 
-  const {userLogin} = useContext(UserContext)
+  const { user,userLogin } = useContext(UserContext)
 
   const [formData, setFormData] = useState({
       dni: "",
@@ -20,8 +20,8 @@ export default function Login() {
 
   const handleSubmit =()=>{
 
-    const obtenerUsuario =()=>{
-
+    const obtenerUsuario = async()=>{
+      
     }
     obtenerUsuario();
   }

@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../../public/img/nexe_blue.svg";
 import { useContext, useState } from "react";
@@ -6,9 +6,13 @@ import { UserContext } from "../../context/UserProvider";
 
 export default function Navbar() {
 
-	const {user} = useContext(UserContext)
-	console.log(user);
-	
+	const {user, userLogout} = useContext(UserContext)
+	const navigate = useNavigate()
+
+	const logout =()=>{
+		userLogout()
+		navigate("/")
+	}
 
 	return (
 		<nav className="navbar">
@@ -47,8 +51,14 @@ export default function Navbar() {
 						Comunicación
 					</NavLink>
 				}
+				<div className="navlink" onClick={logout}>
+					Logout
+				</div>
 				<div className="language-icon">
 					<p>🌐</p>
+				</div>
+				<div>
+					<p></p>
 				</div>
 			</div>
 		</nav>
