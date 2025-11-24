@@ -25,7 +25,7 @@ export default function Navbar() {
 				<NavLink to="/comunication" className={({ isActive }) =>
 						isActive ? "navlink active" : "navlink"}
 				>
-					Comunicacion
+					Comunicación
 				</NavLink>
 			</div>
 			{/* <div className="language-icon">
