@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 export const UserContext = createContext();
 
-export const UserProvider = ({children}) => {
+export const UserProvider = ({ children }) => {
 
     const [user, setUser] = useState({
         id: "",
@@ -13,7 +13,7 @@ export const UserProvider = ({children}) => {
         role: "",
     })
 
-    const userLogout =()=>{
+    const userLogout = () => {
         setUser({
             id: "",
             dni: "",
@@ -23,23 +23,32 @@ export const UserProvider = ({children}) => {
         })
     }
 
-    const userLogin =(data)=>{
-        setUser({
-            id: data.id,
-            dni: data.dni,
-            name: data.name,
-            surname: data.surname,
-            role: data.role,
-        })
+    const userLogin = async (formData) => {
+        try {
+            const res = await fetch("http://localhost:8080/auth/login", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(formData)
+            });
+
+            if (!res.ok) throw new Error("Credenciales incorrectas");
+            const data = await res.json();
+            return data
+
+        } catch (error) {
+            console.log(error);
+        }
     }
 
-  return (
-    <UserContext.Provider value={{
-        user,
-        userLogout,
-        userLogin
-    }}>
-        {children}
-    </UserContext.Provider>
-  )
+    return (
+        <UserContext.Provider value={{
+            user,
+            userLogout,
+            userLogin
+        }}>
+            {children}
+        </UserContext.Provider>
+    )
 }
