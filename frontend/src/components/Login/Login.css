@@ -1,0 +1,40 @@
+.LoginPage {
+    width: 100dvw;
+    height: 100dvh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.LoginPage__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 1em;
+}
+
+.LoginPage__form__div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: var(--color-accent);
+
+    input {
+        padding-inline: 1em;
+        padding-block: 0.5em;
+        border-radius: 12px;
+        border: 2px solid var(--color-accent);
+
+        color: var(--color-accent);
+        font-family: var(--font-logo);
+
+        &:focus {
+            border: 2px solid var(--color-accent);
+        }
+    }
+}

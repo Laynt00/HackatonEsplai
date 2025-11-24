@@ -1,0 +1,22 @@
+.ButtonComponent {
+    padding-inline: 1em;
+    padding-block: 0.6em;
+
+    background-color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 24px;
+
+    font-family: var(--font-base);
+    font-size: 1.2em;
+    cursor: pointer;
+
+    transition: 0.1s all;
+    &:hover {
+        background-color: transparent;
+        color: var(--color-accent);
+    }
+    &:active {
+        transform: scale(0.96);
+    }
+}
