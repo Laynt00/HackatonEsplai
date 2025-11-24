@@ -1,11 +1,12 @@
 import React from 'react';
 import './SearchBar.css';
+import { Search } from 'lucide-react'
 
 export default function SearchBar({ onSearch }) {
   return (
-    <form className="search-bar">
+    <form className="search-bar" onSubmit={(e) => e.preventDefault()}>
       <div className="search">
-        <span className="material-symbols-outlined">search</span>
+        <Search/>
         <input
           className="search-input"
           type="text"

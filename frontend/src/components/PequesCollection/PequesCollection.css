@@ -1,16 +1,30 @@
 .peques-wrapper {
-  height: calc(100vh - 150px); /* Ajusta según altura Navbar + SearchBar */
+  height: calc(100vh - 150px);
   overflow-y: auto;
   padding: 20px;
 }
 
-.peques-grid {
+.peque-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas fijas */
   gap: 20px;
 }
 
-/* Barra de scroll más bonita */
+/* Responsive para tablets */
+@media (max-width: 1024px) {
+  .peque-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+  }
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .peque-grid {
+    grid-template-columns: 1fr; /* 1 columna en móviles */
+  }
+}
+
+/* Barra de scroll */
 .peques-wrapper::-webkit-scrollbar {
   width: 8px;
 }
