@@ -1,4 +1,3 @@
-
 .navbar {
   width: 90%;
   margin: 1% auto;
@@ -11,9 +10,13 @@
   box-sizing: border-box;
 }
 
-.navbar-logo {
+.navbar_logo {
+  display: flex;
+  justify-content: center;
   align-items: center;
   gap: 12px;
+
+  font-family: var(--font-logo);
 }
 
 .navbar-logo-img {
@@ -22,9 +25,14 @@
 }
 
 .navbar-title {
+  font-family: var(--font-logo);
   font-size: 1.4rem;
   font-weight: 600;
   white-space: nowrap; /* Evita que el texto se divida en varias líneas */
+  span {
+    font-family: var(--font-logo);
+    color: var(--color-accent);
+  }
 }
 
 .navbar-links {
@@ -41,13 +49,12 @@
 }
 
 .navlink:hover {
-  color: #000;
+  color: var(--color-accent);
 }
 
 .active {
   font-weight: bold;
-  padding-bottom: 2px;
-  border-bottom: 2px solid black; /* Mejor visualización */
+  color: var(--color-accent);
 }
 
 .language-icon img {
