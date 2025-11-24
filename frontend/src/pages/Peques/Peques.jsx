@@ -1,7 +1,11 @@
 import React from 'react'
+import Navbar from '../../components/Navbar/NavBar'
 
 export default function Peques() {
   return (
-    <div>Peques</div>
+    <>
+      <Navbar />
+      <div>Peques</div>
+    </>
   )
 }

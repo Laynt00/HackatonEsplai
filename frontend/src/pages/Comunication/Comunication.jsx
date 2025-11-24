@@ -1,7 +1,8 @@
 import React from 'react'
+import Navbar from '../../components/Navbar/NavBar'
 
 export default function Comunication() {
   return (
-    <div>Comunication</div>
+    <Navbar />
   )
 }

@@ -1,9 +1,10 @@
 import React from 'react'
+import Navbar from '../../components/Navbar/NavBar'
 
-export const Dashboard = () => {
+export default function Dashboard() {
   return (
-    <section className='DashboardPage'>
-        
-    </section>
+    <>
+      <Navbar />
+    </>
   )
 }
