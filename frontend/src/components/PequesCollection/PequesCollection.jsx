@@ -1,15 +1,21 @@
-import React from 'react';
-import './PequesCollection.css';
-import PequeCard from '../PequeCard/PequeCard.jsx';
+import React from "react";
+import PequeCard from "../PequeCard/PequeCard";
+import "./PequesCollection.css";
+import SearchBar from "../SearchBar/SearchBar";
 
-export default function PequesCollection({ peques }) {
+export default function PequesCollection({ peques = [], onSelectPeque }) {
   return (
-    <div className="peques-wrapper">
-      <div className="peques-grid">
+    <>
+      <SearchBar />
+      <div className="peque-grid">
         {peques.map((p) => (
-          <PequeCard key={p.id} peque={p} />
+          <PequeCard
+            key={p.id}
+            peque={p}
+            onClick={() => onSelectPeque && onSelectPeque(p)}
+          />
         ))}
       </div>
-    </div>
+    </>
   );
 }
