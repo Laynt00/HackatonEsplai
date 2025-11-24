@@ -24,12 +24,12 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public User getUserById(Integer id) {
+    public User getUserById(@PathVariable Integer id) {
         return userService.getUserById(id);
     }
 
     @GetMapping("/dni/{dni}")
-    public User getUserByDni(String dni) {
+    public User getUserByDni(@PathVariable String dni) {
         return userService.getUserByDni(dni);
     }
 
