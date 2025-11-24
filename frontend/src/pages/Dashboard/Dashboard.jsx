@@ -4,12 +4,12 @@ import { Calendar } from "../../components/Calendar/Calendar";
 import { useState, useEffect, useContext } from "react";
 import { ListaPacientesDashboard } from "../../components/ListaPacientesDashboard/ListaPacientesDashboard";
 import Navbar from "../../components/Navbar/NavBar";
+import { AuthContext } from "../../context/AuthProvider";
 
 export default function Dashboard() {
   const [selectedDay, setSelectedDay] = useState(new Date());
   const [appointments, setAppointments] = useState([]);
-  //El token hay que traerselo del contexto
-  const [token, setToken] = useState("sdjndfuidf")
+  const {token} = useContext(AuthContext);
   
   const formatDate = (d) => d?.toISOString().split("T")[0] || "";
 

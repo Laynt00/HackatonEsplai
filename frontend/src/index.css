@@ -2,10 +2,17 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: var(--font-base);
 }
 
 :root {
     /* Variables Globales */
 
     --font-family: "LaQueSea";
+    --color-primary: #1a4e7a;
+    --color-secondary: #457bbd;
+    --color-accent: #d97b2e;
+
+    --font-base: "Google Sans", Arial, sans-serif;
+    --font-logo: "Architects Daughter", cursive;
 }
