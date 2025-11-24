@@ -7,7 +7,7 @@ export default function Navbar() {
 		<nav className="navbar">
 			<div className="navbar_logo">
 				<img src={logo} alt="Logo" className="navbar-logo-img" />
-				<span className="navbar-title">Fundació Nexe</span>
+				<p className="navbar-title">Fundació <span>Nexe</span></p>
 			</div>
 			<div className="navbar-links">
 				<NavLink to="/dashboard" className={({ isActive }) =>
