@@ -7,6 +7,7 @@ export default function Home() {
 
   return (
     <div className="HomePage">
+      <div className="block">
       <div className="HomePage__FundacioNexe">
         <h2 className="HomePage__subtitle">FUNDACIÓ</h2>
         <h1 className="HomePage__title">NEXE</h1>
@@ -14,6 +15,7 @@ export default function Home() {
       <ButtonComponent onClick={()=>navigate("/login")}>
         Acceder
       </ButtonComponent>
+    </div>
     </div>
   );
 }

@@ -1,10 +1,10 @@
 .navbar {
-  width: 90%;
+  width: 100%;
   margin: 1% auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 24px;
+
   background-color: #ffffff;
   position: relative;
   box-sizing: border-box;
@@ -14,19 +14,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  
   gap: 12px;
 
   font-family: var(--font-logo);
 }
 
 .navbar-logo-img {
-  width: 100px;
+  width: 90px;
   object-fit: contain; /* Para que la imagen no se deforme */
 }
 
 .navbar-title {
   font-family: var(--font-logo);
-  font-size: 1.4rem;
+  color: var(--color-primary);
+  font-size: 2rem;
   font-weight: 600;
   white-space: nowrap; /* Evita que el texto se divida en varias líneas */
   span {
